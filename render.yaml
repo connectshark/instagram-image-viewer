@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: instagram-image-viewer
+    env: node
+    region: singapore
+    plan: free
+    branch: main
+    startCommand: node .output/server/index.mjs
+    buildCommand: npm install && npm run build
+    envVars:
+    - key: NITRO_PRESET
+      value: render-com
+    - key: INSTAGRAM_APP_ID
+      sync: false
+    - key: INSTAGRAM_APP_SECRET
+      sync: false
+    - key: INSTAGRAM_REDIRECT_URL
+      sync: false
+    - key: INSTAGRAM_API_DOMAIN
+      sync: false
+    - key: INSTAGRAM_API_VERSION
+      sync: false
