@@ -1,5 +1,5 @@
 {
-  "name": "instagram-image-downloader",
+  "name": "instagram-image-viewer",
   "private": true,
   "scripts": {
     "build": "nuxt build",
